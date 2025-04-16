@@ -1,0 +1,22 @@
+<nav class="navbar">
+    <div class="container">
+      <a routerLink="/rooms" class="logo">RoomShare</a>
+    </div>
+    <header class="header-bar">
+    <!-- <div class="logo">Room Share</div> -->
+    <ng-container *ngIf="true"> 
+      <nav>
+        <a routerLink="/rooms" routerLinkActive="active">Home</a>
+        <!-- <a routerLink="/login" routerLinkActive="active">Login</a> -->
+        <!-- <a routerLink="/register" routerLinkActive="active">Register</a> -->
+        <a routerLink="/add-listing" routerLinkActive="active">Add Accomodation</a>
+        <!-- <a routerLink="/bookings" routerLinkActive="active">Bookings</a> -->
+        <a routerLink="/owner-dashboard" routerLinkActive="active">Owner Dashboard</a>
+        <a routerLink="/tenant-dashboard" routerLinkActive="active">Tenant Dashboard</a>
+        <a routerLink="/booking-request" routerLinkActive="active">Booking Requests</a>
+      </nav>
+    </ng-container>
+  </header>
+</nav>
+  
+  

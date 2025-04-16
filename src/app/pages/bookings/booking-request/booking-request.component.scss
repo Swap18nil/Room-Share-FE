@@ -1,0 +1,117 @@
+.container {
+    padding: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+    text-transform: uppercase;
+    color: #555;
+  }
+  
+  th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  td {
+    vertical-align: top;
+  }
+  
+  .status {
+    font-weight: 600;
+  }
+  
+  .status.pending {
+    color: #d97706; /* amber-600 */
+  }
+  
+  .status.confirmed {
+    color: #059669; /* green-600 */
+  }
+  
+  .status.rejected {
+    color: #dc2626; /* red-600 */
+  }
+  
+  .loading,
+  .no-data {
+    color: #666;
+    margin-top: 16px;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    margin-right: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+  }
+  
+  .btn.accept {
+    background-color: #16a34a; /* green */
+  }
+  
+  .btn.reject {
+    background-color: #dc2626; /* red */
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn.accept {
+    background-color: #16a34a; /* Green */
+    color: white;
+  }
+  
+  .btn.reject {
+    background-color: #dc2626; /* Red */
+    color: white;
+  }
+  
+  .btn.accept:hover {
+    background-color: #15803d;
+  }
+  
+  .btn.reject:hover {
+    background-color: #b91c1c;
+  }
+  

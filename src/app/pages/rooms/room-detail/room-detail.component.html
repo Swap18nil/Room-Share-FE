@@ -1,0 +1,18 @@
+<div class="room-detail-container">
+    <h2>{{ room?.title }}</h2>
+    <p><strong>Description:</strong> {{ room?.description }}</p>
+    <p><strong>Address:</strong> {{ room?.address }}</p>
+    <p><strong>City:</strong> {{ room?.city }}</p>
+    <p><strong>Price:</strong> {{ room?.price }} €/month</p>
+    <p><strong>Type:</strong> {{ room?.type }}</p>
+    <p><strong>Preference:</strong> {{ room?.preference }}</p>
+  
+    <!-- Images Section -->
+    <div class="room-images">
+      <img *ngFor="let image of room?.images" [src]="image" alt="Room Image" />
+    </div>
+  
+    <!-- Button to Book Room -->
+    <button mat-raised-button color="primary" (click)="bookRoom()">Book Now</button>
+  </div>
+  

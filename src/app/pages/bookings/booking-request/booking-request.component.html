@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>Booking Requests</h2>
+
+  <div *ngIf="loading" class="loading">Loading bookings...</div>
+
+  <div class="table-wrapper" *ngIf="!loading && bookings.length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Booking Date</th>
+          <th>Special Requests</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings">
+          <td>{{ booking.fullName }}</td>
+          <td>{{ booking.emailAddress }}</td>
+          <td>{{ booking.phoneNumber }}</td>
+          <td>{{ booking.bookingDate | date: 'shortDate' }}</td>
+          <td>{{ booking.specialRequests || '—' }}</td>
+          <td>
+            <span class="status" [ngClass]="{
+              'confirmed': booking.bookingStatus === 'Confirmed',
+              'pending': booking.bookingStatus === 'Pending',
+              'rejected': booking.bookingStatus === 'Rejected'
+            }">{{ booking.bookingStatus }}</span>
+          </td>
+          <td>
+            <div class="action-buttons" *ngIf="booking.bookingStatus === 'pending'">
+              <button class="btn accept" (click)="handleAction(booking.bookingId, 'approved')">Accept</button>
+              <button class="btn reject" (click)="handleAction(booking.bookingId, 'rejected')">Reject</button>
+            </div>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="!loading && bookings.length === 0" class="no-data">
+    No booking requests found.
+  </div>
+</div>

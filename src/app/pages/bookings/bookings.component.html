@@ -1,0 +1,30 @@
+<div class="booking-container">
+    <h2>Book Your Room</h2>
+    
+    <div class="room-detail">
+      <h3>{{ room?.title }}</h3>
+      <p><strong>Description:</strong> {{ room?.description }}</p>
+      <p><strong>Price:</strong> {{ room?.price }} €/month</p>
+    </div>
+  
+    <form (ngSubmit)="onSubmit()" #bookingForm="ngForm">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Full Name" [(ngModel)]="booking.fullName" name="name" required />
+      </mat-form-field>
+  
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Email Address" [(ngModel)]="booking.emailAddress" name="email" required />
+      </mat-form-field>
+  
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Phone Number" [(ngModel)]="booking.phoneNumber" name="phone" required />
+      </mat-form-field>
+  
+      <mat-form-field class="full-width">
+        <textarea matInput placeholder="Special Requests (optional)" [(ngModel)]="booking.specialRequests" name="requests"></textarea>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="!bookingForm.form.valid">Submit Booking</button>
+    </form>
+  </div>
+  

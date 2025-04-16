@@ -1,0 +1,15 @@
+<div class="dashboard-container">
+    <h2>Tenant Dashboard</h2>
+    <p>Here you can view your bookings.</p>
+  
+    <!-- List of Booked Rooms -->
+    <div class="booked-room-list">
+      <div class="room-card" *ngFor="let room of bookedRooms">
+        <h3>{{ room.title }}</h3>
+        <p>{{ room.description }}</p>
+        <p><strong>Booked Price:</strong> {{ room.price }} €/month</p>
+        <button mat-raised-button color="warn" (click)="cancelBooking(room.bookingId)">Cancel Booking</button>
+      </div>
+    </div>
+  </div>
+  

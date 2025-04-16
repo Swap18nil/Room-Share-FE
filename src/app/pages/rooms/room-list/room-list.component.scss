@@ -1,0 +1,38 @@
+.room-listing-container {
+  padding: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.room-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.room-card {
+  max-width: 100%;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.room-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}

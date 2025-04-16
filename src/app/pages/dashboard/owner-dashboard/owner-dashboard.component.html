@@ -1,0 +1,18 @@
+<div class="dashboard-container">
+    <h2>Owner Dashboard</h2>
+    <p>Here you can manage your listed rooms.</p>
+  
+    <!-- List of Rooms -->
+    <div class="room-list">
+      <div class="room-card" *ngFor="let room of rooms">
+        <h3>{{ room.title }}</h3>
+        <p>{{ room.description }}</p>
+        <p><strong>Price:</strong> {{ room.price }} €/month</p>
+        <button mat-raised-button color="primary" (click)="editPost(room.id)">Edit Room</button>
+      </div>
+    </div>
+  
+    <!-- Add Room Button -->
+    <button mat-raised-button color="accent" class="add-room-btn" (click)="goToAddListing()">Add New Room</button>
+  </div>
+  

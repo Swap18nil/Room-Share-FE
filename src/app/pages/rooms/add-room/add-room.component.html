@@ -1,0 +1,33 @@
+<div class="add-listing">
+  <h2>Add a New Room Listing</h2>
+
+  <form (ngSubmit)="onSubmit()" #roomForm="ngForm">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Room Title" [(ngModel)]="room.title" name="title" required />
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <textarea matInput placeholder="Description" [(ngModel)]="room.description" name="description" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput type="number" placeholder="Price" [(ngModel)]="room.price" name="price" required />
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput placeholder="City" [(ngModel)]="room.city" name="city" required />
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Address" [(ngModel)]="room.address" name="address" required />
+    </mat-form-field>
+
+    <!-- Image Upload Input -->
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+    
+    <!-- Image Preview -->
+    <img *ngIf="previewImage" [src]="previewImage" alt="Selected Image" width="200" height="150"/>
+    <button *ngIf="!roomId" mat-raised-button color="primary" type="submit" [disabled]="!roomForm.form.valid">Add Listing</button>
+    <button *ngIf="roomId" mat-raised-button color="primary" type="submit"  [disabled]="!roomForm.form.valid">Update Listing</button>
+  </form>
+</div>
